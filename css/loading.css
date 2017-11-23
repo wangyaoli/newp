@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.loadingTop,.loadingMiddle,.loadingBottom{
+    position: absolute;
+    left: 0;
+}
+.loadingTop,.loadingBottom{
+    width: 100%;
+    height: 50vh;
+    background: #00c2ff;
+    z-index: 1111111111;
+}
+.loadingTop{
+    top: 0;
+}
+.loadingBottom{
+    top: 50vh;
+}
+.loadingMiddle{
+    width: 100%;
+    height: 8px;
+    background: #fff;
+    z-index: 1111111112;
+    top: calc(50vh - 4px);
+    left: -100%
+}
+.middle{
+    animation: middle .3s linear forwards;
+}
+@keyframes middle {
+    0%{left: -100%;transform: scaleY(1)}
+    80%{left: 0;transform: scaleY(1)}
+    100%{transform: scaleY(0)}
+}
